@@ -2,7 +2,7 @@
 	"FriendlyName": "Mod Template",
 	"Author": "You",
 	"Contact": "N/A",
-	"ModuleFileName": "Distance.ModTemplate.dll",
+	"ModuleFileName": "Mod.Template.dll",
 	"Dependencies": [],
 	"RequiredGSLs": [
 		"com.github.reherc/Centrifuge.Distance"
