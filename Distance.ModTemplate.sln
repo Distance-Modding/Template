@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DIstance.ModTemplate.Content", "DIstance.ModTemplate.Content\DIstance.ModTemplate.Content.shproj", "{4E7D37C7-8AFE-4F79-BAF6-4CE82D05E091}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Distance.ModTemplate.Content", "Distance.ModTemplate.Content\Distance.ModTemplate.Content.shproj", "{4E7D37C7-8AFE-4F79-BAF6-4CE82D05E091}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Distance.ModTemplate", "Distance.ModTemplate\Distance.ModTemplate.csproj", "{7BCB2908-B003-45D9-BE68-50CBA5217603}"
 EndProject
