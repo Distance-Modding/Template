@@ -103,22 +103,7 @@
 		<!-- Set to false to transform files even if the output appears to be up-to-date (default is true)  -->
 		<TransformOutOfDateOnly>false</TransformOutOfDateOnly>
 	</PropertyGroup>
-	<Import Project="$(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets" />
-	<Target Name="CreateModFolder" AfterTargets="AfterBuild">
-		<ItemGroup>
-			<ModContent Include="$(ProjectDir)\..\$(ProjectName).Content\Mod\**\*.*"/>
-		</ItemGroup>
-		<PropertyGroup>
-			<BuildRoot>$(SolutionDir)Build/</BuildRoot>
-			<BuildDestination>$(BuildRoot)$(ProjectName)</BuildDestination>
-			<ModFolder>$(BuildDestination)\Centrifuge\Mods\$(ProjectName)</ModFolder>
-			<GSLFolder>$(BuildDestination)\Centrifuge\GameSupport</GSLFolder>
-		</PropertyGroup>
-		<MakeDir Directories="$(ModFolder)"/>
-		<MakeDir Directories="$(GSLFolder)"/>
-		<Copy SourceFiles="@(ModContent)" DestinationFiles="@(ModContent->'$(ModFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
-		<Copy SourceFiles="$(OutDir)Centrifuge.Distance.dll" DestinationFolder="$(GSLFolder)"/>
-		<Copy SourceFiles="$(OutDir)$(ProjectName).dll" DestinationFolder="$(ModFolder)"/>
-		<ZipDirectory SourceDirectory="$(BuildDestination)" DestinationFile="$(BuildDestination).zip"/>
-	</Target>
+	<Import Project="$(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets"/>
+	<Import Project="$(SolutionDir)Tools.BuildTargets\Distance.Modding.props"/>
+	<Import Project="$(SolutionDir)Tools.BuildTargets\Distance.Modding.targets"/>
 </Project>

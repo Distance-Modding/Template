@@ -5,6 +5,11 @@ Use this repository as a base to create your own Distance mods.
 # Using the template
 On github, click the `Use this template` button to create a new repository based on this one
 
+Once the repository is created, be sure to clone it locally **with submodules**:
+```sh
+git clone --recurse-submodules -j8 <your project .git url>
+```
+
 # Setting up the project
 After opening the project in Visual Studio, be sure to rename the project files while respecting the following naming rules:
 
