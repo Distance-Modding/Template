@@ -109,7 +109,8 @@
 			<ModContent Include="$(ProjectDir)\..\$(ProjectName).Content\Mod\**\*.*"/>
 		</ItemGroup>
 		<PropertyGroup>
-			<BuildDestination>$(SolutionDir)Build/$(ProjectName)</BuildDestination>
+			<BuildRoot>$(SolutionDir)Build/</BuildRoot>
+			<BuildDestination>$(BuildRoot)$(ProjectName)</BuildDestination>
 			<ModFolder>$(BuildDestination)\Centrifuge\Mods\$(ProjectName)</ModFolder>
 			<GSLFolder>$(BuildDestination)\Centrifuge\GameSupport</GSLFolder>
 		</PropertyGroup>
@@ -118,5 +119,6 @@
 		<Copy SourceFiles="@(ModContent)" DestinationFiles="@(ModContent->'$(ModFolder)\%(RecursiveDir)%(Filename)%(Extension)')"/>
 		<Copy SourceFiles="$(OutDir)Centrifuge.Distance.dll" DestinationFolder="$(GSLFolder)"/>
 		<Copy SourceFiles="$(OutDir)$(ProjectName).dll" DestinationFolder="$(ModFolder)"/>
+		<ZipDirectory SourceDirectory="$(BuildDestination)" DestinationFile="$(BuildDestination).zip"/>
 	</Target>
 </Project>
