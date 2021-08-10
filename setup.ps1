@@ -18,7 +18,6 @@ Function Read-ProjectInfo {
 	[OutputType([ProjectInfo])]
 	Param ()
 
-	Clear-Host;
 	Write-Host "Enter a new project name to setup your mod (Example: 'My First Mod').";
 	Write-Host "In order to be valid, a name must respect the following rules:";
 	Write-Host "- The project name can't begin with a number";
@@ -72,7 +71,6 @@ Function Write-FilesContent {
 Function Remove-Script {
 	[OutputType([bool])]
 	Param ()
-	Clear-Host;
 
 	$Yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Remove this powershell script from the disk.";
 	$No = New-Object System.Management.Automation.Host.ChoiceDescription "&No", "Keep this powershell script on the disk.";
@@ -94,8 +92,6 @@ Function Init {
 	If ($RemoveFiles) {
 		Remove-Item -Path "$Source" -Force
 	}
-
-	Clear-Host;
 }
 
 Init;
