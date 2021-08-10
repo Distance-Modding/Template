@@ -19,7 +19,7 @@ Function Read-ProjectInfo {
 	Param ()
 
 	Clear-Host;
-	Write-Host "Enter a new project name to setup your mod.";
+	Write-Host "Enter a new project name to setup your mod (Example: 'My First Mod').";
 	Write-Host "In order to be valid, a name must respect the following rules:";
 	Write-Host "- The project name can't begin with a number";
 	Write-Host "- The project name can't start or end with one or more spaces";

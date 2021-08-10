@@ -11,12 +11,6 @@ git clone --recurse-submodules -j8 <your project .git url>
 ```
 
 # Setting up the project
-After opening the project in Visual Studio, be sure to rename the project files while respecting the following naming rules:
+After cloning the repository on your local drive, run the [setup.ps1](setup.ps1) script using [PowerShell 7 or higher](https://github.com/PowerShell/PowerShell#get-powershell).
 
-- Rename `Mod.Template` and change `Template` to `<your mod name>`
-- Rename `Mod.Template.Content` to the name of the previous project followed by `.Content`
-- Rename the solution file to the same as the main project file
-
-After renaming those files, open your Content project then go to `Mod` and open the `mod.json` file. This file tells the Centrifuge mod loader how to use your mod, be sure to fill the required information accordingly.
-
-Finally, in the main project, open `Mod.cs` and change the mod unique identifier at the top of the file.
+This script will rename the files correctly and replace their content to match your mod name.
