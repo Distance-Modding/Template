@@ -15,9 +15,6 @@ jobs:
   build:
     name: Build and Publish GitHub Release
     runs-on: windows-latest
-    env:
-      ReleaseArtifacts: |
-        Build/Distance Anolytics.zip
     steps:
       - name: Checkout
         uses: actions/checkout@v2
