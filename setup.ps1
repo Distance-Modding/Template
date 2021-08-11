@@ -1,7 +1,6 @@
 Set-Variable Source -Option Constant -Value $MyInvocation.MyCommand.Definition;
 Set-Variable ValidationRegex -Option Constant -Value "^([a-zA-Z]+([ ]?[a-zA-Z0-9])*)\r?$";
 
-[ProjectInfo]$Template = [ProjectInfo]::new("Mod.Template", "Mod Template");
 $Extensions = ".txt", ".json", ".env", ".sln", ".proj", ".csproj", ".vbproj", ".shproj", ".projitems", ".cs", ".vb", ".targets", ".props";
 
 Class ProjectInfo {
@@ -85,8 +84,9 @@ Function Remove-Script {
 Function Init {
 	[ProjectInfo]$Info = Read-ProjectInfo;
 
-	Rename-Files -Find $Template.Namespace -Replace $Info.Namespace;
-	Rename-Files -Find $Template.Title -Replace $Info.Title;
+	Rename-Files -Find "Mod.Template" -Replace $Info.Namespace;
+	Rename-Files -Find "Distance.ModTemplate" -Replace $Info.Namespace;
+	Rename-Files -Find "Mod Template" -Replace $Info.Title;
 
 	[bool]$RemoveFiles = Remove-Script;
 	If ($RemoveFiles) {
