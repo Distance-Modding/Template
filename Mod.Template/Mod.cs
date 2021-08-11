@@ -1,6 +1,7 @@
 ﻿using Reactor.API.Attributes;
 using Reactor.API.Interfaces.Systems;
 using Reactor.API.Logging;
+using Reactor.API.Runtime.Patching;
 using UnityEngine;
 
 namespace Distance.ModTemplate
@@ -37,6 +38,8 @@ namespace Distance.ModTemplate
 			Logger = LogManager.GetForCurrentAssembly();
 
 			Logger.Info("Hello World!");
+
+			RuntimePatcher.AutoPatch();
 		}
 
 		/// <summary>
