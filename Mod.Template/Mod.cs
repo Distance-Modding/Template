@@ -35,6 +35,8 @@ namespace Distance.ModTemplate
 
 			// Create a log file
 			Logger = LogManager.GetForCurrentAssembly();
+
+			Logger.Info("Hello World!");
 		}
 
 		/// <summary>
